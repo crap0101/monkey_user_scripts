@@ -24,7 +24,7 @@ Daniel Day-Lewis,Leonardo DiCaprio,Cameron Diaz,Jim Broadbent,John C. Reilly
 // ==UserScript==
 // @name         wikip-cast-format
 // @namespace    http://tampermonkey.net/
-// @version      0.1, 2024-01-28
+// @version      0.1_2024-01-28
 // @description  formats movie's cast names from wikipedia
 // @author       crap0101
 // @match        https://*.wikipedia.org/*
