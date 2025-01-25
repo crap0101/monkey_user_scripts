@@ -1,6 +1,6 @@
 
 /*******************
- * Press shiftKey+Z, popups the (modified) selected text
+ * Press Ctrl+shift+z, popups the (modified) selected text
  * Used to format the "starring/cast and crew" infos from wikipedia, from this:
 
 Daniel Day-Lewis: William "Bill il Macellaio" Cutting
@@ -24,7 +24,7 @@ Daniel Day-Lewis,Leonardo DiCaprio,Cameron Diaz,Jim Broadbent,John C. Reilly
 // ==UserScript==
 // @name         wikip-cast-format
 // @namespace    http://tampermonkey.net/
-// @version      0.1_2024-01-28
+// @version      0.2_2025-01-25
 // @description  formats movie's cast names from wikipedia
 // @author       crap0101
 // @match        https://*.wikipedia.org/*
@@ -35,7 +35,7 @@ Daniel Day-Lewis,Leonardo DiCaprio,Cameron Diaz,Jim Broadbent,John C. Reilly
 (function() {
     'use strict';
     document.addEventListener("keydown", (e) => {
-        if (e.code == "KeyZ" && e.shiftKey) {
+        if (e.code == "KeyZ" && e.ctrlKey && e.shiftKey) {
             if (getSelection().toString()) {
                 alert(getSelection().toString().split("\n").map((x) => x.split(":")[0]).join(","));
             }
